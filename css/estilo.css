@@ -1,0 +1,202 @@
+
+/*   
+  settings
+*/
+:root {
+    /* cores */
+       --bg-color: gree;
+       --white: #ffffff;
+
+    /* fonts */
+       --titulo-font: 'Roboto', sans-serif;
+       --frase-font: 'Source Sans Pro', sans-serif;
+       --font-13pt: 15pt;
+   
+    /* espaços */
+       --interno: 1rem ;
+       --externo: 1rem;
+       --width-logo: 11rem;
+       --height_logo: 2rem;
+
+    /* bg */
+       --bgi-inicio: url('../assets/capa.png')no-repeat center; 
+                     
+                     
+}
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+h2 {font-family: var(--titulo-font);}
+p  {font-family: var(--frase-font);}
+.box {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+
+
+
+/*
+   INICIO
+*/
+.inicio {
+   width: 100%;
+   height: 40rem; 
+   padding: var(--interno);
+   background: var(--bgi-inicio);
+   background-size: cover;
+}
+.inicio .box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.bloco__logo-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8rem;
+}
+
+.inicio__menu_mobile {display: none;}
+
+.bloco__logo-menu .img {
+   width: var(--largura-logo);
+   height: var(--height_logo);
+}
+.inicio__menu ul {
+    position: relative; 
+    top: 15px;
+}
+.inicio__menu li {display: inline-block;}
+.inicio__menu a {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--font-13pt);
+}
+.inicio__menu a:hover {
+    height: 1rem;
+    background-color: #47474266;
+}
+.inicio__menu li:hover {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(12, 228, 12);
+}
+
+.bloco_chamada {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+} 
+.inicio__chamada-flex {
+    width: 100%;
+    max-width: 600px;
+    margin-right: 3rem;
+}
+
+.bloco_chamada__titulo {
+    max-width: 80%;
+    margin-bottom: var(--externo);
+    font-size: 33pt;
+    font-weight: 400;
+    color: white;
+}
+.bloco_chamada p {
+    max-width: 100%;
+    margin-bottom: var(--externo);
+    font-size: 18pt;
+    font-weight: 300;
+    color: #b4afaf;
+    text-align: left;
+    line-height: 2rem;
+}
+.bloco_chamada__btn{
+    width: 200px;
+    height: 4rem;
+    font-size: 15pt;
+    font-weight: 300;
+    font-family: var(--titulo-font);
+    color: white;
+    background-color: #e65f2e;
+    cursor: pointer;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+
+.bloco_chamada__btn:hover{
+    background-color: transparent;
+    color: rgb(124, 231, 16);
+    border: 1px solid #e65f2e;
+}
+
+
+/*
+   INICIO_MOBILE
+*/
+.inicio_mobile {display: none;}
+.menu_icon {
+    font-size: 30pt;
+    color: white;
+    cursor: pointer;
+}
+  
+.menu_mobile__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
+.inicio__menu_mobile li {
+    background-color: rgb(54, 53, 53);
+    padding: 1.5rem ;
+    border-bottom: 1px solid rgb(117, 108, 108);
+}
+
+.inicio__menu_mobile li:hover {
+    background-color: rgba(5, 5, 5, 0.8);
+}
+
+.inicio__menu_mobile a {
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+}
+
+
+/* 
+   servicos
+*/
+.servicos {
+    background-color: rgb(75, 71, 71);
+}
+
+
+@media screen and (max-width: 860px) {
+    .bloco__logo-menu {height: 7rem;}
+    .inicio__menu {display: none;}
+
+/* mobile */    
+    .inicio__menu_mobile {display: block;}
+   
+/* chamada */
+    .inicio__chamada-flex {
+        width: 100%;
+        margin: auto;
+       
+    }
+    .bloco_chamada__titulo {max-width: 100%;}
+    
+}
+@media screen and (max-width: 764px) {
+   
+}
